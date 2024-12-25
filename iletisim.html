@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="resimler/Ural_Programming.png" type="image/x-icon">
+    <title>İletişim | Ural Programming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="iletisim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="ust_bolum">
+        <div class="sirket_logosu">
+            <a href="index.html">
+                <img src="resimler/logo.png" alt="Ural Programming Logo" class="sirket_logosu-resim">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="ana_kapsayici">
+        <h1>İletişim</h1>
+        <p>Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz. Ayrıca, sosyal medya hesaplarımız üzerinden de bize ulaşabilirsiniz. Hızlı yanıt almak için, iletişim bilgilerinizi doğru girdiğinizden emin olun.</p>
+        
+        <h2>İletişim Bilgilerimiz</h2>
+        <ul class="iletisim-bilgileri">
+            <li><strong>Telefon:</strong> <a href="tel:+905519605172">+90 551 960 51 72</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:halilural.1434@gmail.com">halilural.1434@gmail.com</a></li>
+            <li><strong>Adres:</strong> Ural Programming, Fındıklı Mahallesi, No: 112-114, Maltepe, İstanbul, Türkiye</li>
+        </ul>
+
+        <h2>Bize Ulaşın</h2>
+        <form id="iletisim-formu">
+            <label for="name">Adınız-Soyadınız</label>
+            <input type="text" id="name" name="name" required placeholder="Adınız-Soyadınız">
+            
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" required placeholder="E-posta adresiniz">
+            
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Mesajınız"></textarea>
+            
+            <label for="subject">Konu</label>
+            <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu">
+
+            <button type="gonder">Gönder</button>
+        </form>
+
+        <h2>Harita</h2>
+        <div class="harita-ana_kapsayici">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.4481352420435!2d29.134273312288723!3d40.97166697123632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac60a57f64c43%3A0x804490949d3d5a56!2zRsSxbmTEsWtsxLEsIFNhcm1hxZ_EsWsgU2suIE5vOjExMiwgMzQ4NTQgTWFsdGVwZS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1734541848222!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <h2>Sosyal Medya Hesaplarımız</h2>
+        <div class="sosyal_medya">
+            <div class="sosyal_medya_linkleri">
+                <a href="https://www.instagram.com/halil.url" target="_blank" class="sosyal_ikon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100011450465916&locale=tr_TR" target="_blank" class="sosyal_ikon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/halil-ural-830042336" target="_blank" class="sosyal_ikon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="alt_bolum">
+        <p>© 2024 Ural Programming - Tüm Hakları Saklıdır</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Genel Stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ust_bolum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 30px ;
+    margin-bottom: 20px; /* Header ile içerik arasında boşluk */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ana Kapsayıcı */
+.ana_kapsayici {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    padding-bottom: 60px;
+    margin-top: 20px; /* Header ile içerik arasında boşluk */
+}
+
+/* Başlık */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 40px; /* Başlık ile paragraf arasında boşluk */
+}
+
+/* Paragraf */
+p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1em;
+    margin-bottom: 60px; /* Paragraf ile hizmet kutuları arasında boşluk */
+}
+
+/* Hizmet Kutuları */
+.hizmetler {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.hizmet {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 1;
+}
+
+.hizmet:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Hover durumunda en üstte olacak */
+}
+
+.hizmetler:hover .hizmet:not(:hover) {
+    filter: blur(3px); /* Sadece hover durumunda olmayan kutuları blurla */
+}
+
+.description {
+    position: absolute;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 40px); /* Hizmet kutucuğunun genişliğine uyumlu */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Efektli geçiş */
+    transform: translateY(20px); /* Başlangıçta biraz aşağıda */
+    z-index: 10; /* Description kutucuğu hizmet kutucuğunun üstünde */
+    top: calc(100% + 10px); /* Hizmetin altında ve 10px boşluk */
+    left: 20px; /* Hizmet kutucuğunun solundan 20px içeri */
+    pointer-events: none; /* Tıklanabilirliği engelle */
+}
+
+.hizmetler:hover .hizmet:not(:hover):not(:has(.description:hover)) {
+    filter: blur(3px); /* Sadece hover durumunda olmayan ve description'ı hover olmayan kutuları blurla */
+}
+
+.hizmet:hover .description {
+    opacity: 1; /* Description'ı göster */
+    transform: translateY(0); /* Yerine getir */
+}
+
+/* Footer Stili */
+.alt_bolum {
+    background-color: #1e1e1e;
+    color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hizmetler {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hizmetler {
+        grid-template-columns: 1fr;
+    }
+}
